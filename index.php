@@ -370,8 +370,10 @@ http://www.templatemo.com/tm-498-stimulus
                     <div class="wow fadeInUp footer-copyright" data-wow-delay="1.8s">
                          <p>Copyright &copy; 2018 Ahsan Code</p>
 
-                         <script type="text/javascript" src="https://free-hit-counters.net/count/x95"></script><br>
-      <a href='https://xn--besucherzhler-counter-e2b.com/'>http://besucherzähler-counter.com</a> <script type='text/javascript' src='https://www.whomania.com/ctr?id=4850686a0401361ddf5142f05ce10a56c849d1ae'></script>
+                         <?php
+            include ("counter.php");
+            echo "<p><svg width="100" height="45" id="besucherzaehler2"><g><rect width="100" height="45" x="0" y="0" style="fill: ffffff;" fill-opacity="1.0" /><text x="6" y="38" style="" font-family="Roboto, sans-serif" font-size="11" fill="565656"> $kunjungan[0] </text><rect width="3" height="9" x="6" y="14" style="fill: 565656;"/><rect width="3" height="17" x="11" y="6" style="fill: 565656;"/><rect width="3" height="13" x="16" y="10" style="fill: 565656;"/><text x="25" y="23" style="font-weight: bold;" font-family="Roboto, sans-serif" font-size="11" fill="565656">Visitors</text></g></svg></p>";
+            ?>
                     </div>
 				<ul class="wow fadeInUp social-icon" data-wow-delay="2s">
                          <li><a href="https://web.facebook.com/cybernet.darknet" class="fa fa-facebook"></a></li>
