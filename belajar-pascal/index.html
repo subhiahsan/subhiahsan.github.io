@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta charset="utf-8">
+<title>Belajar Algoritma dan Pemrograman dengan Bahasa Pascal untuk Pemula</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="description" content="Pedoman bagi pemula untuk belajar Algoritma. Panduan ini menjelaskan konsep logika pemrograman dan algoritma komputer dasar secara lengkap menggunakan bahasa pemrograman Pascal."/>
+<meta property="og:locale" content="id_ID"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Belajar Algoritma dan Pemrograman dengan Bahasa Pascal untuk Pemula"/>
+<meta property="og:description" content="Pedoman bagi pemula untuk belajar Algoritma. Panduan ini menjelaskan konsep logika pemrograman dan algoritma komputer dasar secara lengkap menggunakan bahasa pemrograman Pascal."/>
+<meta property="og:url" content="https://subhiahsan.github.io/belajar-pascal" />
+<meta property="og:image" content="../img/pascal.png" />
+<meta name="google-site-verification" content="" />
+<meta property="og:updated_time" content="2018-08-18T19:12:10&#43;07:00"/>
+<link rel="alternate" hreflang="id-id" href="https://subhiahsan.github.io/belajar-pascal" />
+<link rel="canonical" href="https://subhiahsan.github.io/belajar-pascal"/>
+<link rel="icon" href="img/Ahsan-Logo" sizes='32x32'/>
+<style>
+.row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col,.col-1,.col-10,.col-11,.col-12,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-auto,.col-lg,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-auto,.col-md,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-auto,.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-auto,.col-xl,.col-xl-1,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-auto{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px}.btn,.form-control{padding:.375rem .75rem;font-size:1rem;line-height:1.5}.col{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-1,.col-auto{-webkit-box-flex:0}.col-auto{-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-2,.col-3{-webkit-box-flex:0}.col-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-4,.col-5{-webkit-box-flex:0}.col-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-6,.col-7{-webkit-box-flex:0}.col-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-8,.col-9{-webkit-box-flex:0}.col-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-10,.col-11{-webkit-box-flex:0}.col-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-11{-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-12{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.w-25{width:25%!important}.w-50{width:50%!important}.w-75{width:75%!important}.w-100{width:100%!important}.h-25{height:25%!important}.h-50{height:50%!important}.h-75{height:75%!important}.h-100{height:100%!important}.mw-100{max-width:100%!important}.mh-100{max-height:100%!important}.m-0{margin:0!important}.mt-0,.my-0{margin-top:0!important}.mr-0,.mx-0{margin-right:0!important}.mb-0,.my-0{margin-bottom:0!important}.ml-0,.mx-0{margin-left:0!important}.m-1{margin:.25rem!important}.mt-1,.my-1{margin-top:.25rem!important}.mr-1,.mx-1{margin-right:.25rem!important}.mb-1,.my-1{margin-bottom:.25rem!important}.ml-1,.mx-1{margin-left:.25rem!important}.m-2{margin:.5rem!important}.mt-2,.my-2{margin-top:.5rem!important}.mr-2,.mx-2{margin-right:.5rem!important}.mb-2,.my-2{margin-bottom:.5rem!important}.ml-2,.mx-2{margin-left:.5rem!important}.m-3{margin:1rem!important}.mt-3,.my-3{margin-top:1rem!important}.mr-3,.mx-3{margin-right:1rem!important}.mb-3,.my-3{margin-bottom:1rem!important}.ml-3,.mx-3{margin-left:1rem!important}.m-4{margin:1.5rem!important}.mt-4,.my-4{margin-top:1.5rem!important}.mr-4,.mx-4{margin-right:1.5rem!important}.mb-4,.my-4{margin-bottom:1.5rem!important}.ml-4,.mx-4{margin-left:1.5rem!important}.m-5{margin:3rem!important}.mt-5,.my-5{margin-top:3rem!important}.mr-5,.mx-5{margin-right:3rem!important}.mb-5,.my-5{margin-bottom:3rem!important}.ml-5,.mx-5{margin-left:3rem!important}.p-0{padding:0!important}.pt-0,.py-0{padding-top:0!important}.pr-0,.px-0{padding-right:0!important}.pb-0,.py-0{padding-bottom:0!important}.pl-0,.px-0{padding-left:0!important}.p-1{padding:.25rem!important}.pt-1,.py-1{padding-top:.25rem!important}.pr-1,.px-1{padding-right:.25rem!important}.pb-1,.py-1{padding-bottom:.25rem!important}.pl-1,.px-1{padding-left:.25rem!important}.p-2{padding:.5rem!important}.pt-2,.py-2{padding-top:.5rem!important}.pr-2,.px-2{padding-right:.5rem!important}.pb-2,.py-2{padding-bottom:.5rem!important}.pl-2,.px-2{padding-left:.5rem!important}.p-3{padding:1rem!important}.pt-3,.py-3{padding-top:1rem!important}.pr-3,.px-3{padding-right:1rem!important}.pb-3,.py-3{padding-bottom:1rem!important}.pl-3,.px-3{padding-left:1rem!important}.p-4{padding:1.5rem!important}.pt-4,.py-4{padding-top:1.5rem!important}.pr-4,.px-4{padding-right:1.5rem!important}.pb-4,.py-4{padding-bottom:1.5rem!important}.pl-4,.px-4{padding-left:1.5rem!important}.p-5{padding:3rem!important}.pt-5,.py-5{padding-top:3rem!important}.pr-5,.px-5{padding-right:3rem!important}.pb-5,.py-5{padding-bottom:3rem!important}.pl-5,.px-5{padding-left:3rem!important}.m-auto{margin:auto!important}.mt-auto,.my-auto{margin-top:auto!important}.mr-auto,.mx-auto{margin-right:auto!important}.mb-auto,.my-auto{margin-bottom:auto!important}.ml-auto,.mx-auto{margin-left:auto!important}.float-left{float:left!important}.float-right{float:right!important}.float-none{float:none!important}.position-static{position:static!important}.position-relative{position:relative!important}.position-absolute{position:absolute!important}.position-fixed{position:fixed!important}.position-sticky{position:-webkit-sticky!important;position:sticky!important}.fixed-bottom,.fixed-top{position:fixed;right:0;left:0;z-index:1030}.fixed-top{top:0}.fixed-bottom{bottom:0}.d-none{display:none!important}.d-inline{display:inline!important}.d-inline-block{display:inline-block!important}.d-block{display:block!important}.d-table{display:table!important}.card{position:relative;display:flex;-ms-flex-direction:column;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,.125);border-radius:.25rem}.card>hr{margin-right:0;margin-left:0}.card>.list-group:first-child .list-group-item:first-child{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.card>.list-group:last-child .list-group-item:last-child{border-bottom-right-radius:.25rem;border-bottom-left-radius:.25rem}.card-body{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;padding:1.25rem}.card-footer,.card-header{padding:.75rem 1.25rem;background-color:rgba(0,0,0,.03)}.card-title{margin-bottom:.75rem}.card-header,.card-subtitle,.card-text:last-child{margin-bottom:0}.card-subtitle{margin-top:-.375rem}.card-link+.card-link{margin-left:1.25rem}.card-header-pills,.card-header-tabs{margin-right:-.625rem;margin-left:-.625rem}.card-header{border-bottom:1px solid rgba(0,0,0,.125)}.card-header:first-child{border-radius:calc(.25rem - 1px) calc(.25rem - 1px) 0 0}.card-header+.list-group .list-group-item:first-child{border-top:0}.card-footer{border-top:1px solid rgba(0,0,0,.125)}.card-footer:last-child{border-radius:0 0 calc(.25rem - 1px) calc(.25rem - 1px)}.card-header-tabs{margin-bottom:-.75rem;border-bottom:0}.card-img-overlay{position:absolute;top:0;right:0;bottom:0;left:0;padding:1.25rem}.card-img{width:100%;border-radius:calc(.25rem - 1px)}.card-img-top{width:100%;border-top-left-radius:calc(.25rem - 1px);border-top-right-radius:calc(.25rem - 1px)}.card-img-bottom{width:100%;border-bottom-right-radius:calc(.25rem - 1px);border-bottom-left-radius:calc(.25rem - 1px)}.card-deck{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column}.card-deck .card{margin-bottom:15px}.card-group{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.card-group>.card{margin-bottom:15px}.card-columns .card{margin-bottom:.75rem}.container,.container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;width:100%}.pagination{display:-webkit-box;display:-ms-flexbox;display:flex;padding-left:0;list-style:none;border-radius:.25rem}.page-link{position:relative;display:block;padding:.5rem .75rem;margin-left:-1px;line-height:1.25;color:#007bff;background-color:#fff;border:1px solid #dee2e6}.d-table-row{display:table-row!important}.d-table-cell{display:table-cell!important}.d-flex{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important}.d-inline-flex{display:-webkit-inline-box!important;display:-ms-inline-flexbox!important;display:inline-flex!important}body{background-color:#f5f6f7!important;color:#555}a:link,a:visited{color:#E5554E}pre{padding-top:25px;position:relative;background:#f5f2f0;padding:30px 1em 15px}pre:before{font-size:14px;content:'Source Code';position:absolute;top:0;padding:9px 0;left:0;right:0;color:#fff;display:block;margin:0;text-indent:15px;background-color:#6c757d;letter-spacing:0}pre::after{display:inline-block;content:'>_';font-style:normal;font-weight:normal;font-size:14px;color:#fff;top:0;right:0;padding:9px 14px;position:absolute}blockquote{padding:0 1em;color:#6a737d;border-left:0.25em solid #e5554e}blockquote>:last-child{margin-bottom:0}.post-content{color:#333;font-size:16px;font-weight:400;overflow:auto;}.post-content h2{margin-bottom:20px}.post-content img{width:100%;height:auto}#TableOfContents{border-bottom:1px solid #ddd;padding:0 0 20px;margin-bottom:20px}#TableOfContents::before{content:"Dalam halaman ini saya membuat tutorial menjadi beberapa bagian. Silahkan baca dari awal atau langsung menuju bagian yang ingin anda pelajari melalui link berikut:"}#TableOfContents ul{margin:5px 0px 0px;padding:0;clear:both}#TableOfContents ul li{padding:5px 0px;font-size:16px;overflow:hidden;white-space:nowrap}#TableOfContents ul li a{background:#ffffff;border:2px solid #E5554E;border-radius:10px;color:#E5554E;text-decoration:none;padding:5px 10px;display:block}#TableOfContents a:hover{background:#E5554E;color:#fff}table{width:100%;max-width:100%;margin-bottom:1.625rem;background-color:transparent}table td,table th{padding:.75rem;vertical-align:middle;border-top:1px solid #dee2e6}table thead th{vertical-align:top;border-bottom:2px solid #dee2e6}table tbody+tbody{border-top:2px solid #dee2e6}table tbody tr:nth-of-type(odd){background-color:rgba(0,0,0,.05)}table tbody tr:hover{background-color:rgba(0,0,0,.075)}.emoji{height:16px;width:16px}.ling{overflow:hidden}.box{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden;margin:5px 0 20px}.box iframe,.box object,.box embed{position:absolute;top:0;left:0;width:100%;height:100%}.iklan{background:#f5f5f5;text-align:center;overflow:hidden;margin:30px 0}.iklan:before{content:"Advertisement";font-size:10px;letter-spacing:0.3em;padding:10px 0;display:block}.kotak{text-align:center;width:336px;margin:0 auto;height:280px;overflow:hidden}.banner{background-image:url("https://d33wubrfki0l68.cloudfront.net/fe1f1e77274f3f52ce8148afff302fde47c8a2f3/a8b64/img/placeholder.svg");background-size:100%;width:auto;min-height:300px;overflow:hidden;position:relative}.banner img{width:100%;height:auto}.share{position:relative;padding:0 20px}.judul{font-size: 34px;line-height: 1.425em;border-left: 5px solid #dc3545;padding-left: 20px;margin-bottom: 20px;}.tag{font-size:14px!important}.tombol{display:none}
+#sidebar-sticky {padding: 0;margin: 0 auto;position: -webkit-sticky;position: sticky;top: 70px;}@media (max-width:992px){.kotak{background:#fff;height:60px;width:320px;z-index:999;margin: 2px auto 4px;border: 1px solid #ddd;}.floating{background:#f5f5f5;position:fixed;z-index:998;bottom:0;left:0;right:0;border-top:1px solid #ddd;}.banner{min-height:150px}.tombol{position:absolute;top:0;right:0;display:block}.navbar input[type=checkbox]{position:absolute;right:0px;top:0;width:40px;height:40px;opacity:0;z-index:4}.show{display:none}.navbar input[type=checkbox]:checked ~ div{display:block}.card-title{font-size:24px;font-weight:700}.post-content h2{font-size:18px!important;font-weight:700}.judul{font-size:22px}.judul{font-size:18px}}
+
+</style>
+<link rel='stylesheet' type='text/css' media='(min-width:576px)' href='../css/bootstrap-sm.css'/>
+<link rel='stylesheet' type='text/css' media='(min-width:768px)' href='../css/bootstrap-md.css'/>
+<link rel='stylesheet' type='text/css' media='(min-width:992px)' href='../css/bootstrap-lg.css'/>
+<link rel='stylesheet' type='text/css' media='(min-width:1200px)' href='../css/bootstrap-xl.css'/>
+<link rel='stylesheet' type='text/css' media='print' href='../css/bootstrap-print.css'/>
+<script type='text/javascript' async src='../js/lazysizes.min.js'></script>
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "AhsanCode : Bukan Pro bukan juga amatiran",
+    
+    "url": "https://subhiahsan.github.io"
+}
+</script>
+<script>
+!function(e){"use strict";var n=function(n,t,o){var i,d,r,a,l=e.document,f=l.createElement("link"),s=o||"all";return t?i=t:(d=(l.body||l.getElementsByTagName("head")[0]).childNodes,i=d[d.length-1]),r=l.styleSheets,f.rel="stylesheet",f.href=n,f.media="only x",function e(n){return l.body?n():void setTimeout(function(){e(n)})}(function(){i.parentNode.insertBefore(f,t?i:i.nextSibling)}),a=function(e){for(var n=f.href,t=r.length;t--;)if(r[t].href===n)return e();setTimeout(function(){a(e)})},f.addEventListener&&f.addEventListener("load",function(){this.media=s}),f.onloadcssdefined=a,a(function(){f.media!==s&&(f.media=s)}),f};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
+</script>
+<script>
+loadCSS("../css/bootstrap.css");
+loadCSS("../css/prism.css");
+</script>
+
+<meta name="google-site-verification" content="" /><script async src="https://pagead2.googlesyndication.com/pagead/js/f.txt"></script></head>
+<body class="bg-light">
+<nav class="navbar position-fixed fixed-top navbar-expand-lg navbar-light bg-white border border-top-0 border-right-0 border-left-0"><div class="container position-relative">
+<a class="navbar-brand float-left" href="https://subhiahsan.github.io"><img src="img/Ahsan-Logo.png" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="logo"> Ahsan<span class="font-weight-bold">Code</span></a>
+<input type="checkbox" class="navbar-toggler navbar-toggler-right"/>
+<span class="tombol border rounded px-3 py-2">&#8801;</span>
+<div class="collapse navbar-collapse tampil" id="navb">
+<ul class="navbar-nav mr-auto text-uppercase small">
+<li class="nav-item"><a class="nav-link" href="https://subhiahsan.github.io">Tentang Saya</a></li>
+<li class="nav-item"><a class="nav-link" href="https://subhiahsan.github.io/#contact">Kontak</a></li>
+</ul>
+<form class="form-inline my-2 my-lg-0" action="https://cse.google.co.id/" id="cse-search-box">
+<input type="hidden" name="ie" value="UTF-8" /><input type="hidden" name="sa" value="search" />
+<input class="bg-light border-dark px-2 small py-1" type="search" name="q" placeholder="Enter your keyword here.."/>
+<button class="bg-dark px-2 py-1 small text-light border-dark" type="submit" name="button">Search</button>
+</form></div></div></nav>
+
+<div class="mb-5 mt-5 pt-5">
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-lg-8">
+    <article>
+      <div class="card">
+        <div class="banner">
+          <img class='lazyload'
+              src='../img/pascal.png'
+              alt='Belajar Algoritma dan Pemrograman dengan Bahasa Pascal untuk Pemula'>
+        </div>
+        <div class="px-4 py-3 border-bottom">
+  <div class="float-right d-none d-md-inline">
+    <a class="btn btn-dark text-light py-0 px-2" href="javascript:window.print();"> <small>Print Halaman</small> </a>
+  </div>
+  <span class="d-none d-lg-inline">Share on:</span>
+  <a class="btn btn-danger text-light py-0 px-2" href="https://plus.google.com/share?url=https%3a%2f%2fsubhiahsan.github.io%2fbelajar-pascal%2f"><small>Google+</small></a>
+  <a class="btn btn-primary text-light py-0 px-2" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fsubhiahsan.github.io%2fbelajar-pascal%2f"><small>Facebook</small></a>
+  <a class="btn btn-secondary text-light py-0 px-2" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fsubhiahsan.github.io%2fbelajar-pascal%2f"><small>Twitter</small></a>
+</div>
+
+        <header class="mt-1 card-header bg-white px-4">
+            <h1 class="card-title judul">Belajar Algoritma dan Pemrograman dengan Bahasa Pascal untuk Pemula</h1>
+            <p class="border-top pt-3 small font-italic">Pedoman bagi pemula untuk belajar Algoritma. Panduan ini menjelaskan konsep logika pemrograman dan algoritma komputer dasar secara lengkap menggunakan bahasa pemrograman Pascal.</p>
+            <div class="mb-3">
+              
+              <span class="badge badge-success">
+                   #<a class="text-white" href="https://subhiahsan.github.io/belajar-pascal">Bahasa Pascal</a>
+              </span>
+              
+            </div>
+        </header>
+        <div class="card-body p-md-4">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#1-apa-itu-algoritma-pemrograman">#1 Apa itu Algoritma Pemrograman?</a></li>
+<li><a href="#2-bahasa-pemrograman-pascal">#2 Bahasa Pemrograman Pascal</a></li>
+<li><a href="#3-dasar-dasar-pemrograman">#3 Dasar-Dasar Pemrograman</a></li>
+<li><a href="#4-algoritma-percabangan">#4 Algoritma Percabangan</a></li>
+<li><a href="#5-algoritma-perulangan">#5 Algoritma Perulangan</a></li>
+<li><a href="#6-tipe-data-array">#6 Tipe Data Array</a></li>
+<li><a href="#7-prosedur-dan-fungsi">#7 Prosedur dan Fungsi</a></li>
+<li><a href="#bonus-studi-kasus-program-pascal">BONUS: Program Pascal Kelas X-MIPA-3 SMA Negeri 1 Sidoarjo</a></li>
+</ul></li>
+</ul>
+</nav>
+
+        <div class="post-content">
+        
+
+<p>Jika anda adalah mahasiswa jurusan informatika, mungkin teman-teman sudah pernah mendapat materi perkuliahan yang membahas algoritma pemrograman. Namun&hellip;</p>
+
+<p><strong>Masalahnya adalah:</strong> Kita tidak tahu betapa pentingnya sebuah logika dan algoritma dalam pemrograman komputer, bahkan sering kali kita mengabaikannya.</p>
+
+<p>Padahal algoritma adalah dasar utama yang kita butuhkan sebelum masuk ke dunia pemrograman. Jika anda belum paham apa itu algoritma maka tidak akan mudah.</p>
+
+<p><em>Inilah salah satu alasan mengapa Anak IT belum tentu bisa koding</em>.</p>
+
+<p>Kita ibaratkan saat kita belajar bahasa pemrograman kita sedang membuat rumah, jika dasarnya tidak kuat maka untuk bisa berdiri tegakpun bukalah hal yang mudah.</p>
+
+<p>Benarkah demikian, mari kita bahas pada praktiknya:</p>
+
+<p>Seorang programmer pada umumnya mendapatkan tugas berdasarkan permasalahan. Kemudian tugas kita sebagai programmer adalah menyelesaikan masalah tersebut.</p>
+
+<p>Yang perlu anda ketahui yaitu: <em>Programmer tidak melakukan pengkodean program secara begitu saja, namun mengikuti perencanaan dan metodologi yang terstruktur.</em></p>
+
+<p>Setelah kita mengetahui dengan baik dan jelas mengenai permasalahan yang ingin diselesaikan, langkah selanjutnya yaitu membuat rumusan algoritma.</p>
+
+<div id='cse' class="border-top border-bottom py-3 my-4">. . .</div>
+<script src="https://www.google.com/jsapi" type="text/javascript"></script> <script type="text/javascript"> var x = document.getElementsByTagName("title"); var opt = "kursus coding pemrograman%"; google.load('search', '1', { language: 'in', style: google.loader.themes.DEFAULT }); google.setOnLoadCallback(function () { var customSearchOptions = {}; var customSearchControl = new google.search.CustomSearchControl( 'partner-pub-9644180954842017:2173872476', customSearchOptions); customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET); var options = new google.search.DrawOptions(); options.enableSearchResultsOnly(); customSearchControl.draw('cse',options); customSearchControl.execute(opt); }, true); </script>
+<style type='text/css'>
+.gsc-above-wrapper-area, .gsc-resultsHeader, .gsc-results, .gsc-webResult, .gs-webResult .gs-snippet, .gs-imageResult .gs-snippet, .gcsc-branding-text, img.gsc-branding-img, img.gsc-branding-img-noclear, img.gcsc-branding-img, img.gcsc-branding-img-noclear,.gs-web-image-box, img.gsc-branding-img, img.gsc-branding-img-noclear, img.gcsc-branding-img, img.gcsc-branding-img-noclear, span.individualLabel{ display:none !important; }
+  </style>
+
+
+<h2 id="1-apa-itu-algoritma-pemrograman">#1 Apa itu Algoritma Pemrograman?</h2>
+
+<p>Secara sederhana pengertian algoritma dapat disimpulkan sebagai berikut:</p>
+
+<blockquote>
+<p><strong>Algoritma</strong> adalah aturan atau langkah-langkah yang sistematis dan juga logis untuk memecahkan sebuah permasalahan. Logis menjadi kunci dari sebuah algoritma.</p>
+</blockquote>
+
+<p>Jika masih bingung, maksudnya seperti ini:</p>
+
+<p>Kita pasti tahu bahwa komputer akan memroses intruksi sesuai dengan urutan. Misalnya ketika kita ingin mencetak halaman menggunakan printer tentunya akan berurutan.</p>
+
+<p>Maksudnya kita tidak mungkin mendapat nomor halaman secara acak.</p>
+
+<p>Oleh karena itu dalam pemrograman komputer, penyelesaian masalah juga didefinisikan dalam bentuk sebuah aturan logis atau lebih mudahnya sebuah langkah demi langkah.</p>
+
+<p>Yang dimaksud logis adalah: Harus bernilai benar (TRUE) atau salah (FALSE).</p>
+
+<p>Langkah-langkah tersebutlah yang kita gunakan untuk memecahkan sebuah masalah.</p>
+
+<p>Jadi intinya adalah: sebuah algoritma kita butuhkan untuk memerintah komputer supaya mengambil langkah-langkah tertentu dalam menyelesaikan suatu masalah.</p>
+
+<p><strong>Contoh Algoritma dalam kehidupan Sehari-hari:</strong></p>
+
+<p>Meskipun tidak kita sadari, namun sebenarnya dalam kehidupan sehari-hari kita sudah menggunakan algoritma untuk melakukan sesuatu. Apapaun itu&hellip;</p>
+
+<p>Berikut contoh algoritma dalam kehidupan sehari-hari yang mungkin tidak anda sadari. Ada rangkaian autran atau langkah-langkah yang harus kita lakukan.</p>
+
+<p>Misalahnya Algoritma berangkat ke sekolah.</p>
+
+<blockquote>
+<p>Langkah 1 - Memakai sepatu dan seragam sekolah</p>
+
+<p>Langkah 2 - Berpamitan kepada orang tua</p>
+
+<p>Langkah 3 - Jika cuaca hujan maka memakai jas hujan. Jika tidak, lanjut langah 4</p>
+
+<p>Langkah 4 - Menuju ke Sekolah</p>
+
+<p>Sampai di Tempat Sekolah</p>
+</blockquote>
+
+<p>Langkah-langkah diatas disebut Algoritma.</p>
+
+<p>Ketika manusia berusaha memecahkan sebuah masalah, maka metode atau teknik yang digunakan masing-masing orang bisa berbeda dalam memecahkan  masalah tersebut.</p>
+
+<p>Mari lihat lagi masalah kita diatas adalah kita ingin berangkat ke sekolah.</p>
+
+<p>Dan untuk mencapai ke sekolah bisa saja cara atau langkah-langkah yang saya tulis diatas berbeda dengan cara yang anda lakukan sebelum berangkat ke sekolah.</p>
+
+<p>Dengan kata lain, algoritma memungkinkan suatu permasalahan dipecahkan dengan metode dan logika yang berlainan. Seperti pepatah <em>&ldquo;banyak jalan menuju roma&rdquo;</em>.</p>
+
+<p><strong>Syarat-syarat Algoritma:</strong></p>
+
+<p>Berikut syarat-Syarat Algoritma menurut <em>Donald E. Knuth</em>, yaitu:</p>
+
+<ul>
+<li><p><strong>Finiteness (Keterbatasan)</strong> - Algoritma harus berakhir setelah melakukan sejumlah langkah proses.</p></li>
+
+<li><p><strong>Definiteness (Kepastian)</strong> - Setiap langkah algoritma harus didefinisikan dengan tepat dan tidak
+menimbulkan makna ganda.</p></li>
+
+<li><p><strong>Input (Masukan)</strong> - Sebuah algoritma memiliki nol atau lebih masukan (input) yang
+diberikan kepada algoritma sebelum dijalankan.</p></li>
+
+<li><p><strong>Output (Keluaran)</strong> - Setiap algoritma memberikan satu atau beberapa hasil keluaran.</p></li>
+
+<li><p><strong>Effectiveness (Efektivitas)</strong> - Langkah-langkah algoritma dikerjakan dalam waktu yang “wajar”.</p></li>
+</ul>
+
+<p>Dengan mempelajari algoritma berarti kita bisa belajar bagaimana cara penyelesaian suatu masalah berdasarkan tahapan-tahapan yang sistematis dan logis.</p>
+
+<p>Namun, inti dari algoritma adalah untuk mencari metode mana yang terbaik dari metode-metode lain yang ada berdasarkan perbandingan waktu muat dan penggunaan memori.</p>
+
+<h2 id="2-bahasa-pemrograman-pascal">#2 Bahasa Pemrograman Pascal</h2>
+
+<p>Sebuah algoritma dapat dibuktikan kebenarannya melalui komputer setelah algoritma tersebut ditranslasikan kedalam sebuah program menggunakan bahasa pemrograman.</p>
+
+<p>Lalu, bahasa pemrograman yang kita gunakan adalah Pascal.</p>
+
+<p>Saat ini banyak sekolah maupun universitas di Indonesia yang masih menggunakan bahasa pascal sebagai pengantar pemrograman komputer dasar dan algoritma.</p>
+
+<p>Saya sendiri menggunakan pemrograman pascal saat menempuh mata kuliah <em>algorithm</em> sebagai media pembelajaran untuk mengasah logika dan algoritma di awal perkuliahan.</p>
+
+<p>Jangan khawatir meskipun saat ini anda sama sekali belum memahami sedikitpun bahasa pemrograman, saya berjanji anda dapat mengikuti panduan ini.</p>
+
+<p>Pada dasarnya bahasa pascal relatif mudah dipelajari, karena perintah-perintahnya mirip dengan bahasa inggris sehari-hari misalnya: <em>begin, end, write,</em> dan <em>read</em>.</p>
+
+<p>Selain itu, pascal juga memiliki aturan pemrograman yang terstruktur sehingga cocok digunakan untuk mempelajari bahasa pemrograman terutama bagi pemula.</p>
+
+<p>Tujuan kita belajar bahasa pascal adalah memahami dasar pemrograman yang nantinya dapat anda terapkan dalam bahasa pemrograman lain seperti C++, Java, dan lain-lain.</p>
+
+<p><strong>Download Compiler: Free Pascal atau Turbo Pascal</strong></p>
+
+<p>Untuk membuat program menggunakan bahasa pascal kita memerlukan compiler yang bernama Free Pascal. Sebenarnya anda juga bisa menggunakan Turbo Pascal, namun disini saya akan menggunakan program Free Pascal IDE sebagai compiler.</p>
+
+<p>Khusus untuk pengguna linux silahkan ketikan di Terminal:</p>
+
+<pre><code class="language-linux">
+root@subhiahsan ~$ sudo apt-get install fp-compiler fp-ide
+</code></pre>
+
+<p>Dan untuk menjalakannya:</p>
+
+<pre><code>
+root@subhiahsan ~$ fp
+</code></pre>
+
+<p>Informasi tambahab: <strong>IDE</strong> adalah singkatan dari <em>Integrated Development Environment</em>, yakni sebuah lingkungan pengembangan software yang terintegrasi.</p>
+
+<p>Sebuah aplikasi IDE biasanya terdiri dari <em>code editor, compiler, debugger</em>, dan beberapa fasilitas lain untuk memudahkan pembuatan program komputer.</p>
+
+<p><em>( Download disini: <a href="https://www.freepascal.org/download.var">https://www.freepascal.org/download.var</a> )</em></p>
+
+<h2 id="3-dasar-dasar-pemrograman">#3 Dasar-Dasar Pemrograman</h2>
+
+<p>Pada bagian ini saya menyarankan anda untuk memahami beberapa dasar yang wajib anda kuasai sebelum menghadapi program pascal yang lebih kompleks.</p>
+
+<p>Ada dua istilah yang mungkin sering akan anda dengar yaitu:</p>
+
+<ul>
+<li><p><strong>Variabel dan Konstanta</strong> - <a href="https://www.kodedasar.com/pengertian-variabel">Perbedaan Variabel dan Konstanta</a></p></li>
+
+<li><p><strong>Tipe Data</strong> - <a href="https://subhiahsan.github.io/belajar-pascal/pengertian-tipedata">Perbedaan Tipe Data Primitive dan Composite</a></p></li>
+</ul>
+
+<p>Saya harap sebelum masuk ke bab selanjutnya, anda paham mengenai konsep dasar variabel dan dapat menentukan tipe data yang paling cocok untuk variabel anda.</p>
+
+<p><strong>Struktur Program Pascal:</strong></p>
+
+<p>Mari kita mulai dari hal yang paling dasar. Struktur dari program pascal terdiri dari sebuah judul program dan suatu blok program atau badan program.</p>
+
+<p>Kemudian blok program dibagi lagi menjadi dua bagian yaitu bagian deklarasi dan bagian pernyataan. Silahkan perhatikan struktur program pascal berikut ini:</p>
+
+<pre><code>
+1. Judul Program
+2. Blok Program
+   2.1. Deklarasi
+        - deklarasi label
+        - deklarasi konstanta
+        - deklarasi tipe
+        - deklarasi variable
+        - deklarasi prosedur
+        - deklarasi fungsi
+   2.2. Peryataan
+</code></pre>
+
+<p>Keterangan:</p>
+
+<p><strong>1. Judul Program</strong></p>
+
+<p>Judul program digunakan untuk memberi nama program dan sifatnya optional. Jika ditulis harus terletak pada awal dari program dan diakhiri dengan titik koma (;).</p>
+
+<p>Contoh penulisan judul program yang benar (jangan gunakan spasi):</p>
+
+<pre><code class="language-pascal">
+Program BelajarPascal;
+Program Khusus_Pemula;
+Program Latihan;
+</code></pre>
+
+<p><strong>2. Blok Program</strong></p>
+
+<p>Bagian kedua adalah blok program, disini anda akan berkreasi dengan bahasa pemrograman pascal yang akan anda pelajari lewat panduan ini.</p>
+
+<p><strong>2.1. Deklarasi</strong></p>
+
+<p>Bagian ini menjelaskan secara rinci semua data yang akan digunakan pada suatu program. Berikut macam-macam deklarasi pada pascal.</p>
+
+<ul>
+<li><p><strong>Deklarasi Label</strong> - Digunakan jika pada penulisan program akan menggunakan statemen GOTO (untuk meloncat ke suatu statemen tertentu).</p></li>
+
+<li><p><strong>Deklarasi Konstanta</strong> - Digunakan untuk mengidentifikasikan data yang nilainya sudah ditentukan dan pasti, tidak dapat dirubah dalam program.</p></li>
+
+<li><p><strong>Deklarasi Tipe</strong> - Digunakan untuk menyebutkan tipe setiap data yang akan digunakan pada program Pascal.</p></li>
+
+<li><p><strong>Deklarasi variabel</strong> - Berisi data-data yang bisa berubah-ubah nilainya di dalam program. Deklarasi variabel harus diletakkan setelah deklarasi tipe (jika ada).</p></li>
+</ul>
+
+<p><strong>2.2. Bagian Peryataan / Terproses</strong></p>
+
+<p>Bagian ini diawali dengan BEGIN dan diakhiri dengan END, setiap statamen yang merupakan instruksi program diakhiri dengan tanda titik koma (;)</p>
+
+<p>Berikut contoh blok program:</p>
+
+<pre><code class="language-pascal">
+BEGIN
+..............
+statemen;
+..................
+END.
+</code></pre>
+
+<p><strong>Statemen</strong> adalah perintah untuk pengerjaan program pascal. Statemen terletak di bagian deklarasi statemen dengan diawali oleh kata cadangan BEGIN dan diakhiri dengan kata cadangan END.</p>
+
+<p>Akhir dari setiap statemen diakhiri dengan titik koma [;].</p>
+
+<p><strong>Contoh Program Pascal:</strong></p>
+
+<p>Berikut merupakan contoh baris kode program belajar pascal:</p>
+
+<pre><code class="language-pascal">
+Program BelajarPascal;
+uses crt;
+Label satu;
+CONST a = 15;
+TYPE nyata = real;
+
+VAR b : integer;
+    c : nyata;
+Begin
+   b:=1;
+   c:=a+b;
+   writeln ('Hasil = ',c:3:2);
+   writeln(c);
+   WRITELN('Latihan');
+   GOTO SATU;
+   WRITELN('Pemrograman');
+   satu:
+   WRITELN('Pascal');
+End.
+</code></pre>
+
+<p>Output program tersebut adalah:</p>
+
+<pre><code>
+Hasil = 16.00
+Latihan
+Pascal
+</code></pre>
+
+<p>Tenang saja itu hanyalah contoh, anda tidak harus langsung memahaminya.</p>
+
+<p>Namun diakhir bab, saya berjanji anda akan memahami kode program diatas.</p>
+
+<p><strong>Operasi Input Output:</strong></p>
+
+<p>Setelah anda paham apa itu variabel dan tipe data, sekarang kita akan belajar dasar input output pada pascal menggunakan <code>write</code> dan <code>read</code>.</p>
+
+<p><strong>1. Perintah Output</strong></p>
+
+<p>Perintah <code>write</code> dan <code>writeln</code> digunakan untuk menampilkan output di layar. Bedanya jika menggunakan writeln (ln = line) akan mencetak dengan mengganti baris.</p>
+
+<p>Sedangkan, perintah writeln yang tidak diikuti argument hanya mencetak baris kosong.</p>
+
+<p><strong>2. Perintah Input</strong></p>
+
+<p>Perintah input <code>Read/Readln</code> digunakan untuk memasukkan input data lewat keyboard ke dalam suatu variabel. Sama seperti write dan writeln&hellip;</p>
+
+<p>&hellip;Perintah read akan membaca masukan dari keyboard tanpa memindahkan posisi kursor setelah pembacaan, sedangkan readln akan membaca masukan sekaligus memindahkan posisi kursor.</p>
+
+<p>Berikut contoh program sederhana pascal dengan input output:</p>
+
+<pre><code class="language-pascal">
+Program inputOutput;
+Uses wincrt;
+Var nama, npm : String;
+Begin
+   Clrscr;
+   Write ('masukkan nama dan NPM \n');
+   Write ('------------------------------\n');
+   Write ('nama anda : ');
+   Readln (nama);
+   Write ('NPM anda : '); Readln (npm);
+   Write ('------------------------------\n');
+   Write ('Nama anda', nama, ' dan npm anda ', npm);
+   Readln;
+End.
+</code></pre>
+
+<p>Pada contoh program diatas, saya mendeklarasikan dua variabel yaitu nama dan npm kemudian menggunakan beberapa fungsi input output untuk mendapat nilai.</p>
+
+<p>Lalu di akhir program saya mencetak data yang tersimpan pada variabel nama dan npm.</p>
+
+<p>Kode <code>readln</code> di akhir program untuk tetap menangkap layar. Jika tidak maka program hanya akan berkedip. Lalu menutup secara otomatis karena program selesai.</p>
+
+<h2 id="4-algoritma-percabangan">#4 Algoritma Percabangan</h2>
+
+<p>Pada bab ini anda akan belajar konsep percabangan dalam program.</p>
+
+<p>Dalam kehidupan sehari-hari terkadang kita sering dihadapkan pada kondisi dimana kita harus memilih suatu tindakan atau bahkan pilihan yang rumit (bercabang).</p>
+
+<p>Sebagai contohnya ketika kita ingin berangkat sekolah.</p>
+
+<p><strong>Jika</strong> cuaca sedang hujan <strong>maka</strong> kita akan memakai jas hujan.</p>
+
+<p>Nah seperti yang bisa dilihat, contoh diatas merupakan percabangan paling sederhana, anda hanya dihadapkan dengan dua kondisi antara <strong>ya</strong> dan <strong>tidak</strong> (Benar atau Salah).</p>
+
+<p>Begitu juga dalam membuat program, kita akan sedikit banyak berurusan dengan pilihan.</p>
+
+<p>Namun sayangnya kita tidak selamanya dihadapkan dengan percabangan yang mudah seperti contoh diatas. Untuk itu, kita harus paham algoritma percabangan.</p>
+
+<p>Ada dua macam percabangan yaitu <code>if then else</code> dan <code>switch case</code>.</p>
+
+<p><em>( Silahkan baca: <a href="https://subhiahsan.github.io/belajar-pascal/algoritma-percabangan">Algoritma Percabangan</a> )</em></p>
+
+<h2 id="5-algoritma-perulangan">#5 Algoritma Perulangan</h2>
+
+<p>Pernahkah anda dihukum guru anda untuk menuliskan sebuah kalimat perjanjian tidak akan mengulangi perbuatan tidak baik sampai papan tulis tersebut penuh?</p>
+
+<p>Misalnya menulis:</p>
+
+<blockquote>
+<p>Saya tidak akan bolos sekolah lagi</p>
+
+<p>&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.</p>
+
+<p>&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.</p>
+
+<p>&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.</p>
+
+<p>Saya tidak akan bolos sekolah lagi</p>
+</blockquote>
+
+<p><strong>Catatan</strong>: Anggaplah bagian titik-titik merupakan tulisan yang sama.</p>
+
+<p>Seperti yang bisa anda lihat diatas, kita diminta untuk menulis kalimat yang sama sebanyak (contoh: 50 kali). Tentunya hal ini menjadi pekerjaan yang melelahkan.</p>
+
+<p>Kabar baiknya, kita mengenal fungsi perulangan atau <em>looping</em>.</p>
+
+<p>Dalam bahasa pemrograman kita akan membutuhkan fungsi perulangan untuk melakukan hal yang sama. Dalam contoh diatas mencetak tulisan 50 kali.</p>
+
+<p>Dengan perulangan, anda bisa menghemat sekian banyak baris kode yang pada dasarnya cukup diketik satu kali. Untuk itulah program perulangan digunakan.</p>
+
+<p>biasanya algoritma perulangan digunakan untuk mengurutkan angka atau <em>sorting</em>.</p>
+
+<p><em>( Silahkan baca: <a href="https://subhiahsan.github.io/belajar-pascal/algoritma-perulangan/">Algoritma Perulangan</a> )</em></p>
+
+<h2 id="6-tipe-data-array">#6 Tipe Data Array</h2>
+
+<p>Di awal bab anda sudah membaca perbedaan tipe data <em>Primitive</em> dan <em>Composite</em>.</p>
+
+<p>Lalu pada bab ini kita akan membahas lebih lanjut contoh tipe data Composite pada kasus kali ini adalah tipe data Array. Apa untungnya memakai tipe data array?</p>
+
+<p>Jika sebelumnya anda telah belajar bagaimana cara menyimpan nilai kedalam variabel. Contohnya kita kita membuat variabel <code>uang</code> untuk menyimpan angka.</p>
+
+<p>Dimana jika anda ingin menjumlahkan dua data atau lebih anda juga harus membuat variabel terlebih dahulu. Contoh <code>totalUang</code> = <code>uang1</code> + <code>uang2</code> + <code>uang3</code>.</p>
+
+<p><strong>Ingat:</strong> Variabel hanya mampu menyimpan sebuah nilai.</p>
+
+<p>Hal ini tentu sangat tidak efektif karena untuk membuat program sederhana tersebut kita harus menyiapkan 4 variabel dengan nama yang mungkin sulit untuk kita hafalkan.</p>
+
+<p>Nah tipe data array sendiri digunakan untuk menyimpan banyak data dalam satu nama variabel. Jadi kita dapat menghemat variabel sehingga program lebih efisien.</p>
+
+<p><em>( Silahkan Baca: <a href="https://subhiahsan.github.io/belajar-pascal/pengertian-array/">Pengertian Tipe Data Array</a> )</em></p>
+
+<h2 id="7-prosedur-dan-fungsi">#7 Prosedur dan Fungsi</h2>
+
+<p>Selamat, ini adalah bab terakhir yang akan kita pelajari dalam seri panduan belajar pascal, semua ini adalah dasar kita sebelum memasuki bahasa C++ dan Java.</p>
+
+<p>Pada dasarnya inti dari ide pembuatan prosedur maupun fungsi adalah: kita ingin membuat program kita menjadi bagian-bagian kecil atau yang lebih sederhana.</p>
+
+<p>Jadi bagian program tersebut hanya akan dijalankan ketika kita membutuhkannya. Menariknya lagi, kita dapat menggunakan fungsi tersebut selama berkali-kali.</p>
+
+<p><em>( Silahkan baca: <a href="https://subhiahsan.github.io/belajar-pascal/prosedur-dan-fungsi/">Perbedaan Prosedur dan Fungsi</a> )</em></p>
+
+<h2 id="bonus-studi-kasus-program-pascal">BONUS: Program Pascal Kelas X-MIPA-3 SMA Negeri 1 Sidoarjo</h2>
+
+<pre><code class="language-pascal">
+program absenkelas; 
+
+uses
+  crt;
+
+
+var
+  nama: array [0..35] of string;
+  absen, no: integer;
+  walikelas: string;
+
+
+begin
+  clrscr;
+  walikelas := 'Dra. Sri Wahyuningtyas';
+  nama[0] := 'Alfira Divana Syafitri';
+  nama[1] := 'Amalika Ari Anindya';
+  nama[2] := 'Ayu Oktaviasari';
+  nama[3] := 'Barru Muhammad Albarado';
+  nama[4] := 'Bening Nadya Sanre';
+  nama[5] := 'Delphia Felita Lisanto';
+  nama[6] := 'Dhia Kamila Halisa Putri';
+  nama[7] := 'Elizabeth Oktavia Putri Santoso';
+  nama[8] := 'Elizabeth Sondang Indah Maristela Sitanggang';
+  nama[9] := 'Fajar Haikal';
+  nama[10] := 'Farika Ayu Amalia';
+  nama[11] := 'Fauzan Dwi Asyiraf';
+  nama[12] := 'Hanadia Putri Sabatina';
+  nama[13] := 'Iga Sholihati';
+  nama[14] := 'Intan Aprillia Putri Erinda';
+  nama[15] := 'Irgi Rangga Prayoga';
+  nama[16] := 'Karina Ayu Puspita';
+  nama[17] := 'Luwes Kusriyadi';
+  nama[18] := 'M. Subhi Ahsan';
+  nama[19] := 'Marshela Karen Gracia Tandipanjung';
+  nama[20] := 'Mochamad Bayu Angga Syahputra';
+  nama[21] := 'Mochammad Hammam Andare Yanuar';
+  nama[22] := 'Muchammad Ikhlasul Qolbi';
+  nama[23] := 'Muhammad Aliga Qudaifi';
+  nama[24] := 'Muhammad Hafiz Fahamsyah';
+  nama[25] := 'Muhammad Imron Catur Anoraga';
+  nama[26] := 'Muhammad Nauval Nur Cholidian';
+  nama[27] := 'Nalendra Ravi Kumara';
+  nama[28] := 'Namira Amelia Septiarini';
+  nama[29] := 'Nidya Azwa Kusuma Lazuardi';
+  nama[30] := 'Putu Manik Sesa Arianthi';
+  nama[31] := 'Raihan Nafi Prasetyo';
+  nama[32] := 'Rezza Rizky Fachrezi Althof';
+  nama[33] := 'Riftania Safitri';
+  nama[34] := 'Seisha Salsabila Rosandi';
+  nama[35] := 'Theresia Zoraya';
+  clrscr;
+  repeat 
+    textcolor(cyan);
+    writeln('====== Kelas X-MIPA-3 ======');
+    writeln;
+    textcolor(lightmagenta);
+    writeln('Wali Kelas : ', walikelas);
+    writeln;
+    textcolor(yellow);
+    writeln('1. Cari nama dengan nomor absen');
+    writeln('2. Tampilan semua nama beserta nomor absen');
+    writeln('3. Keluar');
+    writeln;
+    write('Silahkan masukkan pilihan anda : ');
+    readln(no);
+    case no of 
+      1: 
+      begin
+        clrscr;
+        textcolor(green);
+        write('Masukkan nomor absen : ');
+        readln(absen);
+        writeln;
+        writeln('Nomor absen ke-', absen, ' : ', nama[absen - 1]);
+      end;
+      2: 
+      begin
+        clrscr;
+        textcolor(yellow);
+        writeln('1. ', nama[0]);
+        writeln('2. ', nama[1]);
+        writeln('3. ', nama[2]);
+        writeln('4. ', nama[3]);
+        writeln('5. ', nama[4]);
+        writeln('6. ', nama[5]);
+        writeln('7. ', nama[6]);
+        writeln('8. ', nama[7]);
+        writeln('9. ', nama[8]);
+        writeln('10. ', nama[9]);
+        writeln('11. ', nama[10]);
+        writeln('12. ', nama[11]);
+        writeln('13. ', nama[12]);
+        writeln('14. ', nama[13]);
+        writeln('15. ', nama[14]);
+        writeln('16. ', nama[15]);
+        writeln('17. ', nama[16]);
+        writeln('18. ', nama[17]);
+        writeln('19. ', nama[18]);
+        writeln('20. ', nama[19]);
+        writeln('21. ', nama[20]);
+        writeln('22. ', nama[21]);
+        writeln('23. ', nama[22]);
+        writeln('24. ', nama[23]);
+        writeln('25. ', nama[24]);
+        writeln('26. ', nama[25]);
+        writeln('27. ', nama[26]);
+        writeln('28. ', nama[27]);
+        writeln('29. ', nama[28]);
+        writeln('30. ', nama[29]);
+        writeln('31. ', nama[30]);
+        writeln('32. ', nama[31]);
+        writeln('33. ', nama[32]);
+        writeln('34. ', nama[33]);
+        writeln('35. ', nama[34]);
+        writeln('36. ', nama[35]);
+      end;
+      3: 
+      begin
+        writeln;
+        textcolor(yellow);
+        writeln('Terima kasih, created by Ahsan Code');
+      end;
+    end;
+    writeln;
+    textcolor(cyan);
+    writeln('Tekan enter untuk melanjutkan');
+    readln;
+    clrscr;
+  until (no = 3);
+  clrscr 
+end.
+</code></pre>
+
+
+
+<p><strong>Catatan:</strong> Halaman ini akan saya update terus.</p>
+
+        </div>
+        <div class="post-footer">
+          <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type='text/javascript'>var opte='freelance developer%';google.load('search','1',{language:'in',style:google.loader.themes.DEFAULT});google.setOnLoadCallback(function(){var f={};var g=new google.search.CustomSearchControl('partner-pub-9644180954842017:2173872476',f);g.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);var e=new google.search.DrawOptions();e.enableSearchResultsOnly();g.draw('csee',e);g.execute(opte)},true);</script>
+<div id='csee' class="border-top border-bottom py-3 mb-4 mt-3"></div>
+<style type='text/css'>.gs-webResult .gs-snippet,.gs-imageResult .gs-snippet{display:none}.gcsc-branding-img-noclear{width:50px;height:15px}.gcsc-branding{display:none}.gsc-resultsRoot.gsc-tabData.gsc-tabdActive{display:none}.gsc-above-wrapper-area{display:none}</style>
+
+        </div>
+        </div>
+        <div class="card-footer small">
+          Ditulis oleh <a href="https://subhiahsan.github.io"><span class="text-dark font-weight-bold">M. Subhi Ahsan</span></a> <span class="float-right d-none d-md-inline">Last Updated: 18 August 2018</span>
+        </div>
+      </div>
+    </article>
+
+<footer class="mt-4 pt-5 pb-5 bg-white border border-left-0 border-right-0 border-bottom-0">
+<div class="container-fluid text-center text-uppercase small sticky-stopper">
+<span class="d-none d-lg-inline">Dibuat dengan <img class="emoji" draggable="false" alt="❤️" src="../img/love.svg"> di Sidoarjo |</span> <a href="https://subhiahsan.github.io/#contact">Hubungi Saya</a>
+</div>
+</footer>
+
+<script async src='../js/prism.js'></script>
+
+</html>

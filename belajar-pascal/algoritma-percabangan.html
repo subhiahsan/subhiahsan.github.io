@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta charset="utf-8">
+<title>2+ Macam Algoritma Percabangan Beserta Contoh Programmnya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="description" content="Disini anda akan belajar seperti apa algoritma percabangan dalam pemrograman dengan contoh program pengambilan keputusan bersadarkan kondisi tertentu."/>
+<meta property="og:locale" content="id_ID"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="2+ Macam Algoritma Percabangan Beserta Contoh Programmnya"/>
+<meta property="og:description" content="Disini anda akan belajar seperti apa algoritma percabangan dalam pemrograman dengan contoh program pengambilan keputusan bersadarkan kondisi tertentu."/>
+<meta property="og:url" content="https://subhiahsan.github.io/belajar-pascal/algoritma-percabangan" />
+<meta property="og:image" content="../img/pascal.png" />
+<meta name="google-site-verification" content="" />
+<meta property="og:updated_time" content="2018-08-18T19:12:10&#43;07:00"/>
+<link rel="alternate" hreflang="id-id" href="https://subhiahsan.github.io/belajar-pascal/algoritma-percabangan" />
+<link rel="canonical" href="https://subhiahsan.github.io/belajar-pascal/algoritma-percabangan"/>
+<link rel="icon" href="img/Ahsan-Logo" sizes='32x32'/>
+<style>
+.row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col,.col-1,.col-10,.col-11,.col-12,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-auto,.col-lg,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-auto,.col-md,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-auto,.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-auto,.col-xl,.col-xl-1,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-auto{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px}.btn,.form-control{padding:.375rem .75rem;font-size:1rem;line-height:1.5}.col{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-1,.col-auto{-webkit-box-flex:0}.col-auto{-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-2,.col-3{-webkit-box-flex:0}.col-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-4,.col-5{-webkit-box-flex:0}.col-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-6,.col-7{-webkit-box-flex:0}.col-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-8,.col-9{-webkit-box-flex:0}.col-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-10,.col-11{-webkit-box-flex:0}.col-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-11{-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-12{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.w-25{width:25%!important}.w-50{width:50%!important}.w-75{width:75%!important}.w-100{width:100%!important}.h-25{height:25%!important}.h-50{height:50%!important}.h-75{height:75%!important}.h-100{height:100%!important}.mw-100{max-width:100%!important}.mh-100{max-height:100%!important}.m-0{margin:0!important}.mt-0,.my-0{margin-top:0!important}.mr-0,.mx-0{margin-right:0!important}.mb-0,.my-0{margin-bottom:0!important}.ml-0,.mx-0{margin-left:0!important}.m-1{margin:.25rem!important}.mt-1,.my-1{margin-top:.25rem!important}.mr-1,.mx-1{margin-right:.25rem!important}.mb-1,.my-1{margin-bottom:.25rem!important}.ml-1,.mx-1{margin-left:.25rem!important}.m-2{margin:.5rem!important}.mt-2,.my-2{margin-top:.5rem!important}.mr-2,.mx-2{margin-right:.5rem!important}.mb-2,.my-2{margin-bottom:.5rem!important}.ml-2,.mx-2{margin-left:.5rem!important}.m-3{margin:1rem!important}.mt-3,.my-3{margin-top:1rem!important}.mr-3,.mx-3{margin-right:1rem!important}.mb-3,.my-3{margin-bottom:1rem!important}.ml-3,.mx-3{margin-left:1rem!important}.m-4{margin:1.5rem!important}.mt-4,.my-4{margin-top:1.5rem!important}.mr-4,.mx-4{margin-right:1.5rem!important}.mb-4,.my-4{margin-bottom:1.5rem!important}.ml-4,.mx-4{margin-left:1.5rem!important}.m-5{margin:3rem!important}.mt-5,.my-5{margin-top:3rem!important}.mr-5,.mx-5{margin-right:3rem!important}.mb-5,.my-5{margin-bottom:3rem!important}.ml-5,.mx-5{margin-left:3rem!important}.p-0{padding:0!important}.pt-0,.py-0{padding-top:0!important}.pr-0,.px-0{padding-right:0!important}.pb-0,.py-0{padding-bottom:0!important}.pl-0,.px-0{padding-left:0!important}.p-1{padding:.25rem!important}.pt-1,.py-1{padding-top:.25rem!important}.pr-1,.px-1{padding-right:.25rem!important}.pb-1,.py-1{padding-bottom:.25rem!important}.pl-1,.px-1{padding-left:.25rem!important}.p-2{padding:.5rem!important}.pt-2,.py-2{padding-top:.5rem!important}.pr-2,.px-2{padding-right:.5rem!important}.pb-2,.py-2{padding-bottom:.5rem!important}.pl-2,.px-2{padding-left:.5rem!important}.p-3{padding:1rem!important}.pt-3,.py-3{padding-top:1rem!important}.pr-3,.px-3{padding-right:1rem!important}.pb-3,.py-3{padding-bottom:1rem!important}.pl-3,.px-3{padding-left:1rem!important}.p-4{padding:1.5rem!important}.pt-4,.py-4{padding-top:1.5rem!important}.pr-4,.px-4{padding-right:1.5rem!important}.pb-4,.py-4{padding-bottom:1.5rem!important}.pl-4,.px-4{padding-left:1.5rem!important}.p-5{padding:3rem!important}.pt-5,.py-5{padding-top:3rem!important}.pr-5,.px-5{padding-right:3rem!important}.pb-5,.py-5{padding-bottom:3rem!important}.pl-5,.px-5{padding-left:3rem!important}.m-auto{margin:auto!important}.mt-auto,.my-auto{margin-top:auto!important}.mr-auto,.mx-auto{margin-right:auto!important}.mb-auto,.my-auto{margin-bottom:auto!important}.ml-auto,.mx-auto{margin-left:auto!important}.float-left{float:left!important}.float-right{float:right!important}.float-none{float:none!important}.position-static{position:static!important}.position-relative{position:relative!important}.position-absolute{position:absolute!important}.position-fixed{position:fixed!important}.position-sticky{position:-webkit-sticky!important;position:sticky!important}.fixed-bottom,.fixed-top{position:fixed;right:0;left:0;z-index:1030}.fixed-top{top:0}.fixed-bottom{bottom:0}.d-none{display:none!important}.d-inline{display:inline!important}.d-inline-block{display:inline-block!important}.d-block{display:block!important}.d-table{display:table!important}.card{position:relative;display:flex;-ms-flex-direction:column;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,.125);border-radius:.25rem}.card>hr{margin-right:0;margin-left:0}.card>.list-group:first-child .list-group-item:first-child{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.card>.list-group:last-child .list-group-item:last-child{border-bottom-right-radius:.25rem;border-bottom-left-radius:.25rem}.card-body{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;padding:1.25rem}.card-footer,.card-header{padding:.75rem 1.25rem;background-color:rgba(0,0,0,.03)}.card-title{margin-bottom:.75rem}.card-header,.card-subtitle,.card-text:last-child{margin-bottom:0}.card-subtitle{margin-top:-.375rem}.card-link+.card-link{margin-left:1.25rem}.card-header-pills,.card-header-tabs{margin-right:-.625rem;margin-left:-.625rem}.card-header{border-bottom:1px solid rgba(0,0,0,.125)}.card-header:first-child{border-radius:calc(.25rem - 1px) calc(.25rem - 1px) 0 0}.card-header+.list-group .list-group-item:first-child{border-top:0}.card-footer{border-top:1px solid rgba(0,0,0,.125)}.card-footer:last-child{border-radius:0 0 calc(.25rem - 1px) calc(.25rem - 1px)}.card-header-tabs{margin-bottom:-.75rem;border-bottom:0}.card-img-overlay{position:absolute;top:0;right:0;bottom:0;left:0;padding:1.25rem}.card-img{width:100%;border-radius:calc(.25rem - 1px)}.card-img-top{width:100%;border-top-left-radius:calc(.25rem - 1px);border-top-right-radius:calc(.25rem - 1px)}.card-img-bottom{width:100%;border-bottom-right-radius:calc(.25rem - 1px);border-bottom-left-radius:calc(.25rem - 1px)}.card-deck{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column}.card-deck .card{margin-bottom:15px}.card-group{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.card-group>.card{margin-bottom:15px}.card-columns .card{margin-bottom:.75rem}.container,.container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;width:100%}.pagination{display:-webkit-box;display:-ms-flexbox;display:flex;padding-left:0;list-style:none;border-radius:.25rem}.page-link{position:relative;display:block;padding:.5rem .75rem;margin-left:-1px;line-height:1.25;color:#007bff;background-color:#fff;border:1px solid #dee2e6}.d-table-row{display:table-row!important}.d-table-cell{display:table-cell!important}.d-flex{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important}.d-inline-flex{display:-webkit-inline-box!important;display:-ms-inline-flexbox!important;display:inline-flex!important}body{background-color:#f5f6f7!important;color:#555}a:link,a:visited{color:#E5554E}pre{padding-top:25px;position:relative;background:#f5f2f0;padding:30px 1em 15px}pre:before{font-size:14px;content:'Source Code';position:absolute;top:0;padding:9px 0;left:0;right:0;color:#fff;display:block;margin:0;text-indent:15px;background-color:#6c757d;letter-spacing:0}pre::after{display:inline-block;content:'>_';font-style:normal;font-weight:normal;font-size:14px;color:#fff;top:0;right:0;padding:9px 14px;position:absolute}blockquote{padding:0 1em;color:#6a737d;border-left:0.25em solid #e5554e}blockquote>:last-child{margin-bottom:0}.post-content{color:#333;font-size:16px;font-weight:400;overflow:auto;}.post-content h2{margin-bottom:20px}.post-content img{width:100%;height:auto}#TableOfContents{border-bottom:1px solid #ddd;padding:0 0 20px;margin-bottom:20px}#TableOfContents::before{content:"Dalam halaman ini saya membuat tutorial menjadi beberapa bagian. Silahkan baca dari awal atau langsung menuju bagian yang ingin anda pelajari melalui link berikut:"}#TableOfContents ul{margin:5px 0px 0px;padding:0;clear:both}#TableOfContents ul li{padding:5px 0px;font-size:16px;overflow:hidden;white-space:nowrap}#TableOfContents ul li a{background:#ffffff;border:2px solid #E5554E;border-radius:10px;color:#E5554E;text-decoration:none;padding:5px 10px;display:block}#TableOfContents a:hover{background:#E5554E;color:#fff}table{width:100%;max-width:100%;margin-bottom:1.625rem;background-color:transparent}table td,table th{padding:.75rem;vertical-align:middle;border-top:1px solid #dee2e6}table thead th{vertical-align:top;border-bottom:2px solid #dee2e6}table tbody+tbody{border-top:2px solid #dee2e6}table tbody tr:nth-of-type(odd){background-color:rgba(0,0,0,.05)}table tbody tr:hover{background-color:rgba(0,0,0,.075)}.emoji{height:16px;width:16px}.ling{overflow:hidden}.box{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden;margin:5px 0 20px}.box iframe,.box object,.box embed{position:absolute;top:0;left:0;width:100%;height:100%}.iklan{background:#f5f5f5;text-align:center;overflow:hidden;margin:30px 0}.iklan:before{content:"Advertisement";font-size:10px;letter-spacing:0.3em;padding:10px 0;display:block}.kotak{text-align:center;width:336px;margin:0 auto;height:280px;overflow:hidden}.banner{background-image:url("https://d33wubrfki0l68.cloudfront.net/fe1f1e77274f3f52ce8148afff302fde47c8a2f3/a8b64/img/placeholder.svg");background-size:100%;width:auto;min-height:300px;overflow:hidden;position:relative}.banner img{width:100%;height:auto}.share{position:relative;padding:0 20px}.judul{font-size: 34px;line-height: 1.425em;border-left: 5px solid #dc3545;padding-left: 20px;margin-bottom: 20px;}.tag{font-size:14px!important}.tombol{display:none}
+#sidebar-sticky {padding: 0;margin: 0 auto;position: -webkit-sticky;position: sticky;top: 70px;}@media (max-width:992px){.kotak{background:#fff;height:60px;width:320px;z-index:999;margin: 2px auto 4px;border: 1px solid #ddd;}.floating{background:#f5f5f5;position:fixed;z-index:998;bottom:0;left:0;right:0;border-top:1px solid #ddd;}.banner{min-height:150px}.tombol{position:absolute;top:0;right:0;display:block}.navbar input[type=checkbox]{position:absolute;right:0px;top:0;width:40px;height:40px;opacity:0;z-index:4}.show{display:none}.navbar input[type=checkbox]:checked ~ div{display:block}.card-title{font-size:24px;font-weight:700}.post-content h2{font-size:18px!important;font-weight:700}.judul{font-size:22px}.judul{font-size:18px}}
+
+</style>
+<link rel='stylesheet' type='text/css' media='(min-width:576px)' href='../css/bootstrap-sm.css'/>
+<link rel='stylesheet' type='text/css' media='(min-width:768px)' href='../css/bootstrap-md.css'/>
+<link rel='stylesheet' type='text/css' media='(min-width:992px)' href='../css/bootstrap-lg.css'/>
+<link rel='stylesheet' type='text/css' media='(min-width:1200px)' href='../css/bootstrap-xl.css'/>
+<link rel='stylesheet' type='text/css' media='print' href='../css/bootstrap-print.css'/>
+<script type='text/javascript' async src='../js/lazysizes.min.js'></script>
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "AhsanCode : Bukan Pro bukan juga amatiran",
+    
+    "url": "https://subhiahsan.github.io"
+}
+</script>
+<script>
+!function(e){"use strict";var n=function(n,t,o){var i,d,r,a,l=e.document,f=l.createElement("link"),s=o||"all";return t?i=t:(d=(l.body||l.getElementsByTagName("head")[0]).childNodes,i=d[d.length-1]),r=l.styleSheets,f.rel="stylesheet",f.href=n,f.media="only x",function e(n){return l.body?n():void setTimeout(function(){e(n)})}(function(){i.parentNode.insertBefore(f,t?i:i.nextSibling)}),a=function(e){for(var n=f.href,t=r.length;t--;)if(r[t].href===n)return e();setTimeout(function(){a(e)})},f.addEventListener&&f.addEventListener("load",function(){this.media=s}),f.onloadcssdefined=a,a(function(){f.media!==s&&(f.media=s)}),f};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
+</script>
+<script>
+loadCSS("../css/bootstrap.css");
+loadCSS("../css/prism.css");
+</script>
+
+<meta name="google-site-verification" content="" /><script async src="https://pagead2.googlesyndication.com/pagead/js/f.txt"></script></head>
+<body class="bg-light">
+<nav class="navbar position-fixed fixed-top navbar-expand-lg navbar-light bg-white border border-top-0 border-right-0 border-left-0"><div class="container position-relative">
+<a class="navbar-brand float-left" href="https://subhiahsan.github.io"><img src="img/Ahsan-Logo.png" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="logo"> Ahsan<span class="font-weight-bold">Code</span></a>
+<input type="checkbox" class="navbar-toggler navbar-toggler-right"/>
+<span class="tombol border rounded px-3 py-2">&#8801;</span>
+<div class="collapse navbar-collapse tampil" id="navb">
+<ul class="navbar-nav mr-auto text-uppercase small">
+<li class="nav-item"><a class="nav-link" href="https://subhiahsan.github.io">Tentang Saya</a></li>
+<li class="nav-item"><a class="nav-link" href="https://subhiahsan.github.io/#contact">Kontak</a></li>
+</ul>
+<form class="form-inline my-2 my-lg-0" action="https://cse.google.co.id/" id="cse-search-box">
+<input type="hidden" name="ie" value="UTF-8" /><input type="hidden" name="sa" value="search" />
+<input class="bg-light border-dark px-2 small py-1" type="search" name="q" placeholder="Enter your keyword here.."/>
+<button class="bg-dark px-2 py-1 small text-light border-dark" type="submit" name="button">Search</button>
+</form></div></div></nav>
+
+<div class="mb-5 mt-5 pt-5">
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-lg-8">
+    <article>
+      <div class="card">
+        <div class="banner">
+          <img class='lazyload'
+              src='../img/pascal.png'
+              alt='2&#43; Macam Algoritma Percabangan Beserta Contoh Programmnya'>
+        </div>
+        <div class="px-4 py-3 border-bottom">
+  <div class="float-right d-none d-md-inline">
+    <a class="btn btn-dark text-light py-0 px-2" href="javascript:window.print();"> <small>Print Halaman</small> </a>
+  </div>
+  <span class="d-none d-lg-inline">Share on:</span>
+  <a class="btn btn-danger text-light py-0 px-2" href="https://plus.google.com/share?url=https%3a%2f%2fsubhiahsan.github.io%2fbelajar-pascal%2falgoritma-percabangan"><small>Google+</small></a>
+  <a class="btn btn-primary text-light py-0 px-2" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fsubhiahsan.github.io%2fbelajar-pascal%2falgoritma-percabangan"><small>Facebook</small></a>
+  <a class="btn btn-secondary text-light py-0 px-2" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fsubhiahsan.github.io%2fbelajar-pascal%2falgoritma-percabangan"><small>Twitter</small></a>
+</div>
+
+        <header class="mt-1 card-header bg-white px-4">
+            <h1 class="card-title judul">2&#43; Macam Algoritma Percabangan Beserta Contoh Programmnya</h1>
+            <p class="border-top pt-3 small font-italic">Disini anda akan belajar seperti apa algoritma percabangan dalam pemrograman dengan contoh program pengambilan keputusan bersadarkan kondisi tertentu</p>
+            <div class="mb-3">
+              
+              <span class="badge badge-success">
+                   #<a class="text-white" href="https://subhiahsan.github.io/bahasa-pascal">Bahasa Pascal</a>
+              </span>
+              
+            </div>
+        </header>
+        <div class="card-body p-md-4">
+        <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#macam-macam-percabangan">Macam-macam Percabangan</a></li>
+<li><a href="#1-contoh-program-if-then-else-pascal">#1 Contoh Program If Then Else Pascal</a></li>
+<li><a href="#2-contoh-program-case-of-pascal">#2 Contoh Program Case Of Pascal</a></li>
+<li><a href="#menarik-kesimpulan">Menarik Kesimpulan</a></li>
+</ul></li>
+</ul>
+</nav>
+
+        <div class="post-content">
+        
+
+<p>Dalam kehidupan sehari-hari tentu anda pernah menemukan sebuah pilihan, sebagai contoh sederhana ketika anda akan memasuki sebuah toilet umum.</p>
+
+<p>Hal tersebut termasuk sebuah percabangan dengan algoritma &ldquo;jika anda adalah laki-laki (True) maka masuk toilet pria, jika tidak (False) maka masuk toilet wanita&rdquo;.</p>
+
+<p>Jadi setiap program percabangan hanya mengenal kondisi True (benar) atau False (salah), tidak ada konsidi <strike>bisa jadi</strike> atau kondisi lainnya yang tidak ada kepastian.</p>
+
+<p>Berikut pengertian dari konsep percabangan:</p>
+
+<blockquote>
+<p><strong>Percabangan</strong> adalah cara yang digunakan dalam program untuk mengambil keputusan ke salah satu kemungkinan <em>True</em> atau <em>False</em> dari beberapa kondisi.</p>
+</blockquote>
+
+<p>Jadi program percabangan akan menjalankan instruksi sesuai dengan kondisi tertentu. Kondisi adalah persyaratan yang dapat bernilai benar atau salah.</p>
+
+<p>Instruksi hanya dilaksanakan apabila kondisi bernilai benar.</p>
+
+<div id='cse' class="border-top border-bottom py-3 my-4">. . .</div>
+<script src="https://www.google.com/jsapi" type="text/javascript"></script> <script type="text/javascript"> var x = document.getElementsByTagName("title"); var opt = "kursus coding pemrograman%"; google.load('search', '1', { language: 'in', style: google.loader.themes.DEFAULT }); google.setOnLoadCallback(function () { var customSearchOptions = {}; var customSearchControl = new google.search.CustomSearchControl( 'partner-pub-9644180954842017:2173872476', customSearchOptions); customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET); var options = new google.search.DrawOptions(); options.enableSearchResultsOnly(); customSearchControl.draw('cse',options); customSearchControl.execute(opt); }, true); </script>
+<style type='text/css'>
+.gsc-above-wrapper-area, .gsc-resultsHeader, .gsc-results, .gsc-webResult, .gs-webResult .gs-snippet, .gs-imageResult .gs-snippet, .gcsc-branding-text, img.gsc-branding-img, img.gsc-branding-img-noclear, img.gcsc-branding-img, img.gcsc-branding-img-noclear,.gs-web-image-box, img.gsc-branding-img, img.gsc-branding-img-noclear, img.gcsc-branding-img, img.gcsc-branding-img-noclear, span.individualLabel{ display:none !important; }
+  </style>
+
+
+<h2 id="macam-macam-percabangan">Macam-macam Percabangan</h2>
+
+<p>Ada dua fungsi percabangan dalam pascal yaitu: <code>if then else</code> dan <code>case of</code></p>
+
+<p><strong>1. Percabangan If Then Else</strong></p>
+
+<p>Bentuk struktur <code>If…Then…</code> adalah sebagai berikut :</p>
+
+<pre><code class="language-pascal">
+If Kondisi Then Statemen;
+</code></pre>
+
+<p>Statemen ini digunakan untuk mengendalikan jalannya suatu program berdasarkan suatu kondisi atau syarat yang diberikan. Bila kondisi yang diseleksi terpenuhi&hellip;</p>
+
+<p>&hellip;maka statemen yang mengikuti Then akan diproses, sebaliknya bila kondisi tidak terpenuhi, maka yang akan diproses statemen berikutnya.</p>
+
+<p>Jika kondisi bernilai benar (TRUE) maka statemen akan dikerjakan. Jika kondisi bernilai salah maka (FALSE) maka statemen tidak akan dikerjakan.</p>
+
+<h2 id="1-contoh-program-if-then-else-pascal">#1 Contoh Program If Then Else Pascal</h2>
+
+<pre><code class="language-pascal">
+Program Lulus;
+Uses crt;
+Var nilai : Real;
+Begin
+Write ('Jumlah Nilai :');
+Readln (nilai);
+
+If nilai &gt; 60 Then Writeln('Lulus');
+
+Readln;
+End.
+</code></pre>
+
+<p>Pada contoh diatas, kita akan mencetak kata &ldquo;Lulus&rdquo; jika nilai yang kita masukan lebih dari 60. Jika tidak maka program tidak akan mencetak apapun.</p>
+
+<p>Bentuk statemen <code>IF...THEN...ELSE....</code> merupakan pengembangan dari struktur <code>IF.....THEN.......</code> Bentuk statemen tersebut adalah sebagai berikut :</p>
+
+<pre><code class="language-pascal">
+If kondisi Then
+   Begin
+   ……
+   statemen1;
+   ……
+   End
+Else
+   Begin
+   …….
+   statemen2;
+   …….
+   End;
+</code></pre>
+
+<p>Perintah ini berguna untuk memilih statemen mana yang akan dikerjakan oleh komputer berdasarkan kondisi/syarat yang diberikan.</p>
+
+<p>Jika kondisi bernilai benar (TRUE) maka statemen1 akan dikerjakan. Jika kondisi bernilai salah maka (FALSE) maka statemen2 yang akan dikerjakan.</p>
+
+<p><strong>PENTING</strong>: Untuk selalu menambahkan tanda titik koma (;) di akhir fungsi if.</p>
+
+<p>Dari contoh diatas, mari kita sedikit memodifikasi:</p>
+
+<pre><code class="language-pascal">
+Program Lulus;
+Uses crt;
+Var nilai : Real;
+Begin
+   Write ('Jumlah Nilai :');
+   Readln (nilai);
+
+   If nilai &gt; 60 Then
+      Begin
+      Writeln('Lulus');
+      End
+   Else
+      Begin
+      Writeln('Tidak Lulus');
+      End;
+
+   Readln;
+End.
+</code></pre>
+
+<p>Pada contoh kasus diatas kita akan menggukan kondisi dimana apabila nilai lebih dari 60 maka Lulus, jika tidak (kurang dari 60) maka tidak lulus.</p>
+
+<p><strong>NESTED IF (If Then Else Bersarang)</strong></p>
+
+<pre><code class="language-pascal">
+IF (kondisi 1) THEN
+  begin
+    (kode program 1)
+    IF (kondisi 1.1) THEN
+      begin
+        (kode program 1.1)
+      end;
+  end
+ELSE
+  begin
+    (kode program 2)
+  end;
+</code></pre>
+
+<p>IF bersarang atau nested IF adalah penggunaan struktur IF di dalam IF. Kondisi seperti ini sering digunakan untuk kode program yang sudah cukup kompleks.</p>
+
+<p>Sebagai studi kasus disini kita ingin membuat program yang menyeleksi lamaran pekerjaan dengan ketentuan laki-laki dan umur dibawah 30 tahun.</p>
+
+<pre><code class="language-pascal">
+Program Loker;
+Uses crt;
+Var
+  umur: Real;
+  jenis: char;
+
+Begin
+   Write ('Jenis Kelamin (l/p) :'); Readln (jenis);
+   Write ('Umur (1-100) :'); Readln (umur);
+
+   If jenis = 'l' Then
+      Begin
+      If umur &lt; 30 then
+         Begin
+         Writeln('Lolos');
+         End;
+      End
+   Else
+      Begin
+      Writeln('Tidak Lolos');
+      End;
+
+   Readln;
+End.
+</code></pre>
+
+<p>Demikianlah penjelasan lengkap mengenai percabangan if then else pada pascal.</p>
+
+<h2 id="2-contoh-program-case-of-pascal">#2 Contoh Program Case Of Pascal</h2>
+
+<p><strong>Case Var Of</strong> atau biasa disingkat <code>Case Of</code> adalah salah satu fungsi pada pascal yang mirip dengan If, namun untuk penggunaan yang lebih kompleks.</p>
+
+<p>Ketika anda dihadapkan dengan banyak pilihan (lebih dari dua kondisi) maka program percabangan <code>case of</code> sangat cocok untuk anda gunakan.</p>
+
+<p>Sebagai contoh kecil ketika anda ingin menggunakan ATM.</p>
+
+<p>Anda akan dihadapkan dengan banyak pilihan sekaligus, misal: transfer, tarik tunai, cek saldo, dan lain-lain. Maka dibutuhkan program <code>case of</code> untuk mengatasinya.</p>
+
+<p>Berikut struktur penulisan percabangan case of else dalam pascal:</p>
+
+<pre><code class="language-pascal">
+case (kondisi) of
+   caselabel1 : Statemen;
+   caselabel2 : Statemen;
+   caselabelN : Statemen;
+
+   else
+     StatemenDefault;
+end;
+</code></pre>
+
+<p>Jumlah case label dapat disesuaikan dengan kebutuhan anda. Kemudian jika semua kondisi tidak terpenuhi maka  <code>StatemenDefault</code>-lah yang akan dijalankan.</p>
+
+<p><strong>Catatan:</strong> Jenis variabel (kondisi) yang dipakai Case Of adalah Integer atau Char.</p>
+
+<p>Sebagai studi kasus, berikut saya sertakan program kelas X-MIPA-3 SMAN 1 Sidoarjo dengan fitur absensi karya M. Subhi Ahsan : </p>
+
+<pre><code class="language-pascal">
+program absenkelas; 
+
+uses
+  crt;
+
+
+var
+  nama: array [0..35] of string;
+  absen, no: integer;
+  walikelas: string;
+
+
+begin
+  clrscr;
+  walikelas := 'Dra. Sri Wahyuningtyas';
+  nama[0] := 'Alfira Divana Syafitri';
+  nama[1] := 'Amalika Ari Anindya';
+  nama[2] := 'Ayu Oktaviasari';
+  nama[3] := 'Barru Muhammad Albarado';
+  nama[4] := 'Bening Nadya Sanre';
+  nama[5] := 'Delphia Felita Lisanto';
+  nama[6] := 'Dhia Kamila Halisa Putri';
+  nama[7] := 'Elizabeth Oktavia Putri Santoso';
+  nama[8] := 'Elizabeth Sondang Indah Maristela Sitanggang';
+  nama[9] := 'Fajar Haikal';
+  nama[10] := 'Farika Ayu Amalia';
+  nama[11] := 'Fauzan Dwi Asyiraf';
+  nama[12] := 'Hanadia Putri Sabatina';
+  nama[13] := 'Iga Sholihati';
+  nama[14] := 'Intan Aprillia Putri Erinda';
+  nama[15] := 'Irgi Rangga Prayoga';
+  nama[16] := 'Karina Ayu Puspita';
+  nama[17] := 'Luwes Kusriyadi';
+  nama[18] := 'M. Subhi Ahsan';
+  nama[19] := 'Marshela Karen Gracia Tandipanjung';
+  nama[20] := 'Mochamad Bayu Angga Syahputra';
+  nama[21] := 'Mochammad Hammam Andare Yanuar';
+  nama[22] := 'Muchammad Ikhlasul Qolbi';
+  nama[23] := 'Muhammad Aliga Qudaifi';
+  nama[24] := 'Muhammad Hafiz Fahamsyah';
+  nama[25] := 'Muhammad Imron Catur Anoraga';
+  nama[26] := 'Muhammad Nauval Nur Cholidian';
+  nama[27] := 'Nalendra Ravi Kumara';
+  nama[28] := 'Namira Amelia Septiarini';
+  nama[29] := 'Nidya Azwa Kusuma Lazuardi';
+  nama[30] := 'Putu Manik Sesa Arianthi';
+  nama[31] := 'Raihan Nafi Prasetyo';
+  nama[32] := 'Rezza Rizky Fachrezi Althof';
+  nama[33] := 'Riftania Safitri';
+  nama[34] := 'Seisha Salsabila Rosandi';
+  nama[35] := 'Theresia Zoraya';
+  clrscr;
+  repeat 
+    textcolor(cyan);
+    writeln('====== Kelas X-MIPA-3 ======');
+    writeln;
+    textcolor(lightmagenta);
+    writeln('Wali Kelas : ', walikelas);
+    writeln;
+    textcolor(yellow);
+    writeln('1. Cari nama dengan nomor absen');
+    writeln('2. Tampilan semua nama beserta nomor absen');
+    writeln('3. Keluar');
+    writeln;
+    write('Silahkan masukkan pilihan anda : ');
+    readln(no);
+    case no of 
+      1: 
+      begin
+        clrscr;
+        textcolor(green);
+        write('Masukkan nomor absen : ');
+        readln(absen);
+        writeln;
+        writeln('Nomor absen ke-', absen, ' : ', nama[absen - 1]);
+      end;
+      2: 
+      begin
+        clrscr;
+        textcolor(yellow);
+        writeln('1. ', nama[0]);
+        writeln('2. ', nama[1]);
+        writeln('3. ', nama[2]);
+        writeln('4. ', nama[3]);
+        writeln('5. ', nama[4]);
+        writeln('6. ', nama[5]);
+        writeln('7. ', nama[6]);
+        writeln('8. ', nama[7]);
+        writeln('9. ', nama[8]);
+        writeln('10. ', nama[9]);
+        writeln('11. ', nama[10]);
+        writeln('12. ', nama[11]);
+        writeln('13. ', nama[12]);
+        writeln('14. ', nama[13]);
+        writeln('15. ', nama[14]);
+        writeln('16. ', nama[15]);
+        writeln('17. ', nama[16]);
+        writeln('18. ', nama[17]);
+        writeln('19. ', nama[18]);
+        writeln('20. ', nama[19]);
+        writeln('21. ', nama[20]);
+        writeln('22. ', nama[21]);
+        writeln('23. ', nama[22]);
+        writeln('24. ', nama[23]);
+        writeln('25. ', nama[24]);
+        writeln('26. ', nama[25]);
+        writeln('27. ', nama[26]);
+        writeln('28. ', nama[27]);
+        writeln('29. ', nama[28]);
+        writeln('30. ', nama[29]);
+        writeln('31. ', nama[30]);
+        writeln('32. ', nama[31]);
+        writeln('33. ', nama[32]);
+        writeln('34. ', nama[33]);
+        writeln('35. ', nama[34]);
+        writeln('36. ', nama[35]);
+      end;
+      3: 
+      begin
+        writeln;
+        textcolor(yellow);
+        writeln('Terima kasih, created by Ahsan Code');
+      end;
+    end;
+    writeln;
+    textcolor(cyan);
+    writeln('Tekan enter untuk melanjutkan');
+    readln;
+    clrscr;
+  until (no = 3);
+  clrscr 
+end.
+</code></pre>
+
+<p>Mungkin masih ada beberapa kode yang masih membingungkan bagi anda, namun yang kita fokuskan adalah bagian <code>case of</code> pada program pascal diatas.</p>
+
+<h2 id="menarik-kesimpulan">Menarik Kesimpulan</h2>
+
+<p>Mungkin anda muncul pertanyaan kapan kita menggunakan percabangan <code>if then else</code> dan kapan kita menggunakan <code>case of</code>. Keduanya memiliki kelebihan masing-masing.</p>
+
+<p>Tapi intinya kita menggunakan <code>if then else</code> ketika membutuhkan kondisi dengan logika (boolean). Sebagai contoh kondisi dimana nilai &gt; 10.</p>
+
+<p>Sedangkan fungsi <code>case of</code> hanya digunakan untuk kondisi dengan tipe char maupun integer, artinya tidak bisa digunakan untuk logika.</p>
+
+<p>Demikianlah penjelasan mengenai algoritma percabangan.</p>
+
+<p>Jangan lewatkan seri <a href="https://subhiahsan.github.io/belajar-pascal">belajar pascal</a> kami.</p>
+
+        </div>
+        <div class="post-footer">
+          <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type='text/javascript'>var opte='freelance developer%';google.load('search','1',{language:'in',style:google.loader.themes.DEFAULT});google.setOnLoadCallback(function(){var f={};var g=new google.search.CustomSearchControl('partner-pub-9644180954842017:2173872476',f);g.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);var e=new google.search.DrawOptions();e.enableSearchResultsOnly();g.draw('csee',e);g.execute(opte)},true);</script>
+<div id='csee' class="border-top border-bottom py-3 mb-4 mt-3"></div>
+<style type='text/css'>.gs-webResult .gs-snippet,.gs-imageResult .gs-snippet{display:none}.gcsc-branding-img-noclear{width:50px;height:15px}.gcsc-branding{display:none}.gsc-resultsRoot.gsc-tabData.gsc-tabdActive{display:none}.gsc-above-wrapper-area{display:none}</style>
+
+        </div>
+        </div>
+        <div class="card-footer small">
+          Ditulis oleh <a href="https://subhiahsan.github.io"><span class="text-dark font-weight-bold">M. Subhi Ahsan</span></a> <span class="float-right d-none d-md-inline">Last Updated: 18 August 2018</span>
+        </div>
+      </div>
+    </article>
+
+<footer class="mt-4 pt-5 pb-5 bg-white border border-left-0 border-right-0 border-bottom-0">
+<div class="container-fluid text-center text-uppercase small sticky-stopper">
+<span class="d-none d-lg-inline">Dibuat dengan <img class="emoji" draggable="false" alt="❤️" src="../img/love.svg"> di Sidoarjo |</span> <a href="https://subhiahsan.github.io/#contact">Hubungi Saya</a>
+</div>
+</footer>
+
+<script async src='../js/prism.js'></script>
+
+</html>
