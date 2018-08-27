@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://subhiahsan.github.io/belajar-pascal" />
 <meta property="og:image" content="https://subhiahsan.github.io/belajar-pascal/img/ss.png" />
 <meta name="google-site-verification" content="" />
-<meta property="og:updated_time" content="2018-08-18T19:12:10&#43;07:00"/>
+<meta property="og:updated_time" content="2018-08-27T19:12:10&#43;07:00"/>
 <link rel="alternate" hreflang="id-id" href="https://subhiahsan.github.io/belajar-pascal" />
 <link rel="canonical" href="https://subhiahsan.github.io/belajar-pascal"/>
 <link rel="icon" href="https://subhiahsan.github.io/images/Ahsan-Logo.png" sizes='32x32'/>
@@ -33,7 +33,7 @@
     "@context": "http://schema.org",
     "@type": "WebSite",
     "name": "AhsanCode : Bukan Pro bukan juga amatiran",
-    
+
     "url": "https://subhiahsan.github.io"
 }
 </script>
@@ -87,11 +87,11 @@ loadCSS("https://subhiahsan.github.io/belajar-pascal/css/prism.css");
             <h1 class="card-title judul">Belajar Algoritma dan Pemrograman dengan Bahasa Pascal untuk Pemula</h1>
             <p class="border-top pt-3 small font-italic">Pedoman bagi pemula untuk belajar Algoritma. Panduan ini menjelaskan konsep logika pemrograman dan algoritma komputer dasar secara lengkap menggunakan bahasa pemrograman Pascal.</p>
             <div class="mb-3">
-              
+
               <span class="badge badge-success">
                    #<a class="text-white" href="https://subhiahsan.github.io/belajar-pascal/pengertian-pascal">Bahasa Pascal</a>
               </span>
-              
+
             </div>
         </header>
         <div class="card-body p-md-4">
@@ -112,7 +112,7 @@ loadCSS("https://subhiahsan.github.io/belajar-pascal/css/prism.css");
 </nav>
 
         <div class="post-content">
-        
+
 
 <p>Jika anda adalah mahasiswa jurusan informatika, mungkin teman-teman sudah pernah mendapat materi perkuliahan yang membahas algoritma pemrograman. Namun&hellip;</p>
 
@@ -495,7 +495,7 @@ End.
 <h2 id="bonus-studi-kasus-program-pascal">BONUS: Program Pascal Kelas X-MIPA-3 SMA Negeri 1 Sidoarjo</h2>
 
 <pre><code class="language-pascal">
-program absenkelas; 
+program absenkelas;
 
 uses
   crt;
@@ -503,7 +503,7 @@ uses
 
 var
   nama: array [0..35] of string;
-  absen, no: integer;
+  absen, no, i, a: integer;
   walikelas: string;
 
 
@@ -547,7 +547,7 @@ begin
   nama[34] := 'Seisha Salsabila Rosandi';
   nama[35] := 'Theresia Zoraya';
   clrscr;
-  repeat 
+  repeat
     textcolor(cyan);
     writeln('====== Kelas X-MIPA-3 ======');
     writeln;
@@ -561,8 +561,8 @@ begin
     writeln;
     write('Silahkan masukkan pilihan anda : ');
     readln(no);
-    case no of 
-      1: 
+    case no of
+      1:
       begin
         clrscr;
         textcolor(green);
@@ -571,48 +571,20 @@ begin
         writeln;
         writeln('Nomor absen ke-', absen, ' : ', nama[absen - 1]);
       end;
-      2: 
+      2:
       begin
         clrscr;
-        textcolor(yellow);
-        writeln('1. ', nama[0]);
-        writeln('2. ', nama[1]);
-        writeln('3. ', nama[2]);
-        writeln('4. ', nama[3]);
-        writeln('5. ', nama[4]);
-        writeln('6. ', nama[5]);
-        writeln('7. ', nama[6]);
-        writeln('8. ', nama[7]);
-        writeln('9. ', nama[8]);
-        writeln('10. ', nama[9]);
-        writeln('11. ', nama[10]);
-        writeln('12. ', nama[11]);
-        writeln('13. ', nama[12]);
-        writeln('14. ', nama[13]);
-        writeln('15. ', nama[14]);
-        writeln('16. ', nama[15]);
-        writeln('17. ', nama[16]);
-        writeln('18. ', nama[17]);
-        writeln('19. ', nama[18]);
-        writeln('20. ', nama[19]);
-        writeln('21. ', nama[20]);
-        writeln('22. ', nama[21]);
-        writeln('23. ', nama[22]);
-        writeln('24. ', nama[23]);
-        writeln('25. ', nama[24]);
-        writeln('26. ', nama[25]);
-        writeln('27. ', nama[26]);
-        writeln('28. ', nama[27]);
-        writeln('29. ', nama[28]);
-        writeln('30. ', nama[29]);
-        writeln('31. ', nama[30]);
-        writeln('32. ', nama[31]);
-        writeln('33. ', nama[32]);
-        writeln('34. ', nama[33]);
-        writeln('35. ', nama[34]);
-        writeln('36. ', nama[35]);
+        i := 0;
+        a := 1;
+        while i < 36 do
+          begin
+            textcolor(ligtcyan);
+            writeln(a, '. ', nama[i]);
+            i := i + 1;
+            a := a + 1;
+          end;
       end;
-      3: 
+      3:
       begin
         writeln;
         textcolor(yellow);
@@ -625,7 +597,7 @@ begin
     readln;
     clrscr;
   until (no = 3);
-  clrscr 
+  clrscr
 end.
 </code></pre>
 
@@ -650,9 +622,9 @@ end.
 
 </div>
     <div class="col-sm-12 col-lg-4">
- 
+
 <div id="sidebar-sticky">
- 
+
 
   <div class="card mb-4">
   <div class="card-body p-md-4">
