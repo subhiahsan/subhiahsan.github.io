@@ -130,7 +130,6 @@ nav .brand-logo img {
 }
 
 .home-inner>img{
-  margin-top: 10px;
   height: 80px;
   width: 80px;
 }
@@ -1904,6 +1903,7 @@ textarea.materialize-textarea {
   .author-name {font-size: 18px;}
   .pagination li {height: 25px;width: 25px;}
   .custom-pagination li a {font-size: 12px;line-height: 25px;}
+  .home-inner>img{margin-top: 20px;}
 
 }
 
