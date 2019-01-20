@@ -1863,6 +1863,7 @@ textarea.materialize-textarea {
   .call-to-about {left: 45.5%;}
   .up-btn {left: 45.5%;}
   .custom-nav li a { padding: 25px 20px;}
+  .home-inner>img{margin-top: 15px;}
 
 }
 
@@ -1903,6 +1904,7 @@ textarea.materialize-textarea {
   .author-name {font-size: 18px;}
   .pagination li {height: 25px;width: 25px;}
   .custom-pagination li a {font-size: 12px;line-height: 25px;}
+  .home-inner>img{margin-top: 15px;}
 
 }
 
@@ -1959,6 +1961,7 @@ textarea.materialize-textarea {
   .pagination li {height: 25px;width: 25px;}
   .custom-pagination li a {font-size: 12px;line-height: 25px;}
   .blog-head h1 {font-size: 30px;}
+  .home-inner>img{margin-top: 15px;}
 
 }
 
@@ -1984,6 +1987,7 @@ textarea.materialize-textarea {
   .blog-content h2 {margin-bottom: 0;}
   .blog-archive .card-image {height: 200px;}
   .pagination li {width: 25px;margin: 0 5px;}
+  .home-inner>img{margin-top: 15px;}
 
 }
 
@@ -2006,5 +2010,6 @@ textarea.materialize-textarea {
   .header-title {font-size: 16px;line-height: 30px;}
   .children {margin-left: 10px;}
   .pagination li {width: 25px;margin: 0 5px;}
+  .home-inner>img{margin-top: 15px;}
 
 }
